@@ -3,11 +3,11 @@
 "
 "
 "                     dP                dP
-"                    88                88                    zzzzzzzzzz
-"                   88  .dP  .d8888b. 88 .d8888b. 88d888b....      zzz
-"                  88888"   88'  `88 88 88'  `88 88'  `88........zzz
-"                 88  `8b. 88.  .88 88 88.  .88 88...........  zzz
-"                dP   `YP `88888P' dP `88888P' dP............zzzzzzzzzz
+"                    88                88
+"                   88  .dP  .d8888b. 88 .d8888b. 88d888b.
+"                  88888"   88'  `88 88 88'  `88 88'  `88
+"                 88  `8b. 88.  .88 88 88.  .88 88
+"                dP   `YP `88888P' dP `88888P' dP
 "
 "
 "                   ...when you need pro colors!
@@ -15,7 +15,7 @@
 "
 "
 "
-" Name: kolor
+" Name: kolorz
 " Author: Alessandro Di Martino <aledimax@gmail.com>
 " Version: 1.4.1
 " URL: https://github.com/zeis/vim-kolor
@@ -74,9 +74,9 @@ if !exists("g:kolorz_alternative_matchparen")
   let g:kolorz_alternative_matchparen=0
 endif
 
-highlight Normal          guifg=#c6c6c6    guibg=#2e2d2b    gui=none
-highlight SpecialKey      guifg=#7eaefd    guibg=NONE       gui=none
-highlight NonText         guifg=#7eaefd    guibg=#2e2d2b    gui=none
+highlight Normal          guifg=#c6c6c6    guibg=#2e2d2b   gui=none
+highlight SpecialKey      guifg=#ffffff    guibg=NONE       gui=none
+highlight NonText         guifg=#ffffff    guibg=#2e2d2b    gui=none
 highlight Directory       guifg=#e6987a    guibg=NONE       gui=none
 highlight IncSearch       guifg=#000000    guibg=#ff5fd7    gui=none
 highlight LineNr          guifg=#808080    guibg=#242322    gui=none
@@ -172,53 +172,52 @@ else
   highlight Underlined      guifg=#7eaefd    guibg=NONE   gui=underline
 endif
 
-  " if < 232, then make one of: 27 32 39 45
 if &t_Co > 255
   highlight Normal          ctermfg=251     ctermbg=233     cterm=none
-  highlight SpecialKey      ctermfg=235     ctermbg=none    cterm=none
-  highlight NonText         ctermfg=235     ctermbg=233     cterm=none
-  highlight Directory       ctermfg=39     ctermbg=none    cterm=none
+  highlight SpecialKey      ctermfg=237     ctermbg=none    cterm=none
+  highlight NonText         ctermfg=237     ctermbg=233     cterm=none
+  highlight Directory       ctermfg=180     ctermbg=none    cterm=none
   highlight IncSearch       ctermfg=0       ctermbg=206     cterm=none
-  highlight LineNr          ctermfg=238     ctermbg=234     cterm=none
+  highlight LineNr          ctermfg=237     ctermbg=235     cterm=none
   highlight StatusLine      ctermfg=0       ctermbg=247     cterm=none
   highlight StatusLineNC    ctermfg=247     ctermbg=238     cterm=none
   highlight VertSplit       ctermfg=238     ctermbg=238     cterm=none
   highlight Visual          ctermfg=254     ctermbg=240     cterm=none
   highlight VisualNOS       ctermfg=254     ctermbg=none    cterm=underline
   highlight WildMenu        ctermfg=0       ctermbg=80      cterm=none
-  highlight Folded          ctermfg=27     ctermbg=234     cterm=none
-  highlight FoldColumn      ctermfg=27     ctermbg=234     cterm=none
+  highlight Folded          ctermfg=103     ctermbg=235     cterm=none
+  highlight FoldColumn      ctermfg=103     ctermbg=235     cterm=none
   highlight DiffAdd         ctermfg=none    ctermbg=23      cterm=none
   highlight DiffChange      ctermfg=none    ctermbg=56      cterm=none
   highlight DiffDelete      ctermfg=168     ctermbg=96      cterm=none
   highlight DiffText        ctermfg=0       ctermbg=80      cterm=none
-  highlight SignColumn      ctermfg=244     ctermbg=235     cterm=none
+  highlight SignColumn      ctermfg=244     ctermbg=234     cterm=none
   highlight Conceal         ctermfg=251     ctermbg=none    cterm=none
   highlight SpellBad        ctermfg=168     ctermbg=none    cterm=underline
   highlight SpellCap        ctermfg=80      ctermbg=none    cterm=underline
   highlight SpellRare       ctermfg=121     ctermbg=none    cterm=underline
   highlight SpellLocal      ctermfg=186     ctermbg=none    cterm=underline
-  highlight Pmenu           ctermfg=251     ctermbg=234     cterm=none
+  highlight Pmenu           ctermfg=251     ctermbg=235     cterm=none
   highlight PmenuSel        ctermfg=0       ctermbg=111     cterm=none
-  highlight PmenuSbar       ctermfg=39     ctermbg=235     cterm=none
+  highlight PmenuSbar       ctermfg=206     ctermbg=234     cterm=none
   highlight PmenuThumb      ctermfg=235     ctermbg=206     cterm=none
-  highlight TabLine         ctermfg=244     ctermbg=234     cterm=none
+  highlight TabLine         ctermfg=244     ctermbg=235     cterm=none
   highlight TablineSel      ctermfg=0       ctermbg=247     cterm=none
-  highlight TablineFill     ctermfg=244     ctermbg=234     cterm=none
-  highlight CursorColumn    ctermfg=none    ctermbg=233     cterm=none
-  highlight CursorLine      ctermfg=none    ctermbg=233     cterm=none
-  highlight ColorColumn     ctermfg=none    ctermbg=236     cterm=none
+  highlight TablineFill     ctermfg=244     ctermbg=235     cterm=none
+  highlight CursorColumn    ctermfg=none    ctermbg=237     cterm=none
+  highlight CursorLine      ctermfg=none    ctermbg=237     cterm=none
+  highlight ColorColumn     ctermfg=none    ctermbg=237     cterm=none
   highlight Cursor          ctermfg=0       ctermbg=254     cterm=none
-  highlight Comment         ctermfg=27     ctermbg=none    cterm=none
-  highlight Constant        ctermfg=45     ctermbg=none    cterm=none
-  highlight Special         ctermfg=39     ctermbg=none    cterm=none
-  highlight Identifier      ctermfg=39      ctermbg=none    cterm=none
-  highlight PreProc         ctermfg=32     ctermbg=none    cterm=none
-  highlight String          ctermfg=45     ctermbg=none    cterm=none
-  highlight Number          ctermfg=45     ctermbg=none    cterm=none
-  highlight Function        ctermfg=32     ctermbg=none    cterm=none
-  highlight htmlEndTag      ctermfg=32     ctermbg=none    cterm=none
-  highlight xmlEndTag       ctermfg=32     ctermbg=none    cterm=none
+  highlight Comment         ctermfg=244     ctermbg=none    cterm=none
+  highlight Constant        ctermfg=180     ctermbg=none    cterm=none
+  highlight Special         ctermfg=176     ctermbg=none    cterm=none
+  highlight Identifier      ctermfg=80      ctermbg=none    cterm=none
+  highlight PreProc         ctermfg=186     ctermbg=none    cterm=none
+  highlight String          ctermfg=138     ctermbg=none    cterm=none
+  highlight Number          ctermfg=186     ctermbg=none    cterm=none
+  highlight Function        ctermfg=114     ctermbg=none    cterm=none
+  highlight htmlEndTag      ctermfg=114     ctermbg=none    cterm=none
+  highlight xmlEndTag       ctermfg=114     ctermbg=none    cterm=none
   if g:kolorz_bold==0
     highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=none
     highlight Search          ctermfg=208     ctermbg=none    cterm=none
@@ -241,19 +240,19 @@ if &t_Co > 255
   else
     highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=bold
     highlight Search          ctermfg=208     ctermbg=none    cterm=bold
-    highlight MoreMsg         ctermfg=250     ctermbg=none    cterm=bold
-    highlight ModeMsg         ctermfg=250     ctermbg=none    cterm=bold
-    highlight CursorLineNr    ctermfg=250     ctermbg=236     cterm=bold
+    highlight MoreMsg         ctermfg=121     ctermbg=none    cterm=bold
+    highlight ModeMsg         ctermfg=254     ctermbg=none    cterm=bold
+    highlight CursorLineNr    ctermfg=254     ctermbg=236     cterm=bold
     highlight Question        ctermfg=80      ctermbg=none    cterm=bold
     highlight WarningMsg      ctermfg=206     ctermbg=none    cterm=bold
-    highlight Statement       ctermfg=39      ctermbg=none    cterm=bold
-    highlight Type            ctermfg=39    ctermbg=none    cterm=bold
+    highlight Statement       ctermfg=168     ctermbg=none    cterm=bold
+    highlight Type            ctermfg=141     ctermbg=none    cterm=bold
     highlight Error           ctermfg=168     ctermbg=none    cterm=bold
-    highlight Todo            ctermfg=45      ctermbg=none    cterm=bold
-    highlight Keyword         ctermfg=32     ctermbg=none    cterm=bold
-    highlight Title           ctermfg=45     ctermbg=none    cterm=bold
+    highlight Todo            ctermfg=80      ctermbg=none    cterm=bold
+    highlight Keyword         ctermfg=168     ctermbg=none    cterm=bold
+    highlight Title           ctermfg=141     ctermbg=none    cterm=bold
     if g:kolorz_alternative_matchparen==0
-      highlight MatchParen      ctermfg=235     ctermbg=21     cterm=bold
+      highlight MatchParen      ctermfg=235     ctermbg=206     cterm=bold
     else
       highlight MatchParen      ctermfg=235     ctermbg=247     cterm=bold
     endif

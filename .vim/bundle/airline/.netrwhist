@@ -1,3 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/harryseldon/Sites/tgrower/platforms/android/bin/dexedLibs'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/jasonfrazier/Documents/workspace/KinkHeartIteration/heart-websso/src/main/webapp/skin'
+let g:netrw_dirhist_2='/Users/jasonfrazier/Sites/vanilla/conf'
