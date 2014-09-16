@@ -67,12 +67,18 @@ let g:ctrlp_default_input = 500
 " Tagbar settings
 nmap <leader><SPACE> :TagbarToggle<CR>
 
+ "Nerd commenter settings
+nmap q <plug>NERDCommenterToggle
+vmap q <plug>NERDCommenterToggle
+
 " EasyGrep settings
 let g:EasyGrepCommand=1
 let g:EasyGrepRecursive=1
 let g:EasyGrepSearchCurrentBufferDir=0
 
 " Normal Mode Mappings
+" Krack current line at cursor
+nnoremap K <Esc>i<CR><Esc>
 " open new tab
 nnoremap <leader>t :tab new<CR>
 "   open Ctrl-P, to quick open files in working dir
