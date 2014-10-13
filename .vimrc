@@ -19,8 +19,10 @@ set ignorecase
 set smartcase
 " Indent to correct location with tab
 set smarttab
+" always use tabline
+set showtabline=2
 " Highlight search matches
-set hlsearch
+"set hlsearch
 " Vim can set the title of the terminal window
 set title
 " Use a visual indicator instead of a beep
@@ -45,7 +47,8 @@ colorscheme blueGreenFantasee2
 syntax enable
 syntax on
 set grepprg=ack
-set wildignore+=*/target/*,*/target/build/*,*/.svn/*,*/node_modules/*,*/out/*,*/out/files/*,*/public/javascripts/lib/*,*/public/stylesheets/*
+"set wildignore+=*/target/*,*/target/build/*,*/.svn/*,*/out/*,*/out/files/*,*/public/javascripts/lib/*,*/public/stylesheets/*
+set wildignore+=*/target/*,*/target/build/*,*/.svn/*,*/out/*,*/out/files/*,*/public/stylesheets/*
 
 
 let mapleader = ","
@@ -58,14 +61,15 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_by_filename = 0
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_match_window = 'bottom,order:btt,min:10,max:50,results:200'
-let g:ctrlp_default_input = 500
+let g:ctrlp_default_input = 1
+let g:ctrlp_lazy_update = 500
 "let g:ctrlp_custom_ignore = {
 "    \ 'dir':  '\v[\/]\.(target|build|git|hg|svn|.svn|text-base|war|ear)$',
 "    \ 'file': '\v\.(exe|so|dll|svn-base|war|ear)$',
 "    \ }
 
 " Tagbar settings
-nmap <leader><SPACE> :TagbarToggle<CR>
+nmap <leader><SPACE> :TagbarToggle<CR> <bar> <C-w><C-w>
 
  "Nerd commenter settings
 nmap q <plug>NERDCommenterToggle
@@ -81,6 +85,13 @@ let g:EasyGrepSearchCurrentBufferDir=0
 nnoremap K <Esc>i<CR><Esc>
 " open new tab
 nnoremap <leader>t :tab new<CR>
+" move between tabs
+nmap <C-S-tab> :tabprevious<cr>
+nmap <C-tab> :tabnext<cr>
+map <C-S-tab> :tabprevious<cr>
+map <C-tab> :tabnext<cr>
+imap <C-S-tab> <ESC>:tabprevious<cr>i
+imap <C-tab> <ESC>:tabnext<cr>i
 "   open Ctrl-P, to quick open files in working dir
 nnoremap <leader>p :tab new<CR>:CtrlP<CR>
 "nnoremap <leader>p :CtrlP<CR>
@@ -149,9 +160,12 @@ let javascript_enable_domhtmlcss = 1
 " Airline
 set runtimepath^=~/.vim/bundle/airline
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_min_count = 0
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tagbar#flags = 's'
 
 " Javascript Vim
 "set runtimepath+=~/vim/bundle/vim-javascript/
@@ -223,3 +237,11 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
  autocmd FileType javascript set textwidth=0
 " autocmd FileType javascript set textwidth=79
  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+" Jade
+autocmd FileType jade set sw=2
+autocmd FileType jade set ts=2
+autocmd FileType jade set sts=2
+autocmd FileType jade set textwidth=0
+autocmd FileType jade set noexpandtab
+

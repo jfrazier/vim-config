@@ -28,12 +28,12 @@ hi Statement	    guifg=#00d600    ctermfg=40    gui=none    cterm=none
 hi Special	    guifg=#fffefc    ctermfg=226    gui=none    cterm=none 
 hi SpecialKey	    guifg=#9acd32    ctermfg=247    gui=none    cterm=none 
 hi StatusLine	    guibg=#c2bfa5    ctermbg=07    guifg=#000000    ctermfg=231    gui=none    cterm=none 
-hi StatusLineNC	    guibg=#c2bfa5     ctermbg=07    guifg=#777777    ctermfg=231    gui=none    cterm=none 
+hi StatusLineNC	    guibg=#c2bfa5     ctermbg=07    guifg=#7777777    ctermfg=231    gui=none    cterm=none 
 hi String	    guifg=#66d8ef    ctermfg=242    gui=none    cterm=none 
 hi StorageClass	    guifg=#bdb76b    ctermfg=250    gui=none    cterm=none 
 hi Title	    guifg=#00d600    ctermfg=40    gui=bold    cterm=bold 
 hi Todo	    guifg=#ffaa00    ctermfg=214    gui=none    cterm=none 
 hi Type	    guifg=#08ff4a    ctermfg=232    gui=none    cterm=none 
 hi Underlined	    guifg=#80a0ff    ctermfg=89    gui=underline    cterm=underline 
-hi VertSplit	    guibg=#c2bfa5     ctermbg=07    guifg=#777777    ctermfg=231    gui=none    cterm=none 
+hi VertSplit	    guibg=#c2bfa5     ctermbg=07    guifg=#7777777    ctermfg=231    gui=none    cterm=none 
 hi Visual	    guifg=#ffffff    ctermfg=231    guibg=#008a00    ctermbg=33    gui=none    cterm=none 
